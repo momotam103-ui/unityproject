@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         var inputValue = _inputMove.ReadValue<Vector2>();
-        var direction = new Vector3(0, 0, inputValue.x).normalized * 0.1f;
+        var direction = new Vector3(0, 0, inputValue.x).normalized * 0.03f;
         this.transform.Translate(direction, Space.World);
     }
     void OnCollisionEnter(Collision collision)
